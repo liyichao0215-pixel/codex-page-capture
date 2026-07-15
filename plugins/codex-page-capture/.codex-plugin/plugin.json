@@ -1,0 +1,27 @@
+{
+  "name": "codex-page-capture",
+  "version": "0.1.1",
+  "description": "Capture visible FlovaAI pages as PNG screenshots or silent MP4 recordings from Codex.",
+  "author": {
+    "name": "Liyichao"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex \u9875\u9762\u622a\u56fe\u5f55\u5c4f",
+    "shortDescription": "\u8ba9 Codex \u622a\u53d6\u6216\u5f55\u5236\u5f53\u524d FlovaAI \u9875\u9762",
+    "longDescription": "\u901a\u8fc7\u672c\u5730 Chrome \u6269\u5c55\u622a\u53d6\u5f53\u524d FlovaAI \u6807\u7b7e\u9875\u53ef\u89c1\u533a\u57df\uff0c\u4fdd\u5b58\u4e3a PNG \u6216\u65e0\u58f0 H.264 MP4\u3002\u6240\u6709\u5185\u5bb9\u4ec5\u4fdd\u5b58\u5728\u672c\u673a\u3002",
+    "developerName": "Liyichao",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "brandColor": "#6D5EF6",
+    "defaultPrompt": [
+      "\u622a\u53d6\u5f53\u524d FlovaAI \u9875\u9762\u5e76\u4fdd\u5b58\u5230\u9ed8\u8ba4\u76ee\u5f55\u3002",
+      "\u5f55\u5236\u5f53\u524d FlovaAI \u9875\u9762 20 \u79d2\u5e76\u8fd4\u56de MP4 \u8def\u5f84\u3002",
+      "\u5217\u51fa\u5f53\u524d\u53ef\u4ee5\u622a\u56fe\u548c\u5f55\u5c4f\u7684 FlovaAI \u6807\u7b7e\u9875\u3002"
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

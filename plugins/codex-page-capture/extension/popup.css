@@ -1,0 +1,27 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+  color: #242136;
+  background: #f7f6fb;
+}
+
+body { margin: 0; min-width: 390px; }
+main { padding: 18px; display: grid; gap: 16px; }
+header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+h1 { margin: 0 0 5px; font-size: 18px; }
+p { margin: 0; color: #6d687e; font-size: 12px; }
+.status { border-radius: 999px; padding: 5px 9px; font-size: 11px; white-space: nowrap; }
+.status.ok { color: #106c43; background: #dff7eb; }
+.status.error { color: #a43737; background: #fde7e7; }
+.status.pending { color: #6d5ef6; background: #ece9ff; }
+.actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+button { border: 1px solid #d9d5e7; border-radius: 9px; padding: 9px 10px; background: white; cursor: pointer; }
+button:hover { border-color: #8c82d9; }
+button:disabled { cursor: not-allowed; opacity: 0.5; }
+button.primary { background: #6d5ef6; border-color: #6d5ef6; color: white; }
+button.danger { color: #a43737; }
+label, summary { display: block; margin-bottom: 6px; font-size: 12px; font-weight: 600; }
+.row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+input, textarea { box-sizing: border-box; width: 100%; border: 1px solid #d9d5e7; border-radius: 8px; padding: 9px; background: white; color: inherit; }
+textarea { resize: vertical; margin-bottom: 8px; }
+#message { min-height: 16px; overflow-wrap: anywhere; }

@@ -1,0 +1,20 @@
+{
+  "name": "liyichao-tools",
+  "interface": {
+    "displayName": "Liyichao Tools"
+  },
+  "plugins": [
+    {
+      "name": "codex-page-capture",
+      "source": {
+        "source": "local",
+        "path": "./plugins/codex-page-capture"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Codex 页面截图录屏</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <h1>页面截图录屏</h1>
+          <p id="current-tab">正在读取当前页面…</p>
+        </div>
+        <span id="status" class="status pending">检查中</span>
+      </header>
+
+      <section class="actions">
+        <button id="screenshot" class="primary">截图</button>
+        <button id="start">开始录制</button>
+        <button id="stop" class="danger">停止录制</button>
+      </section>
+
+      <section>
+        <label for="output-dir">默认保存目录</label>
+        <div class="row">
+          <input id="output-dir" type="text" spellcheck="false" />
+          <button id="save-dir">保存</button>
+        </div>
+      </section>
+
+      <details>
+        <summary>允许采集的网站</summary>
+        <label for="allowlist">每行一个匹配规则</label>
+        <textarea id="allowlist" rows="3" spellcheck="false"></textarea>
+        <button id="save-allowlist">保存网站范围</button>
+      </details>
+
+      <p id="message" role="status"></p>
+    </main>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

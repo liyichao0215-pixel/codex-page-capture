@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "codex-page-capture": {
+      "command": "/bin/zsh",
+      "args": ["-lc", "exec \"$HOME/Library/Application Support/CodexPageCapture/mcp-server-launcher.sh\""],
+      "startup_timeout_sec": 15,
+      "tool_timeout_sec": 1900
+    }
+  }
+}

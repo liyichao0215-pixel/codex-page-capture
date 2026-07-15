@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Codex 页面截图录屏",
+  "version": "0.1.1",
+  "description": "让 Codex 截取或录制当前 FlovaAI 标签页的网页内容。",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxKvPSvHZbYn7U/K1qG82E2teh5VDGxLNbgBgQi32bOP14S/9htS2LSvhhs2uZYAZkgUSX1Wvjl3tXGxzVaNwLVZ1CrE++Dvhm6j2GjsnhrY91fbQcaUYQEg9AfVmfo/rv45tABDK000xf4FBEPhDdvSpfoSmQNJeNwXy/hZMKP8XzYVXjS22ESDKi7yPcuh9H64qx+jZgJcbzaPxuUUvPWA+ooGKxx0N3cZW+Jf/ZmAPbRjtnza/PTHEMy5X7+dINtwa1n6V2tYUHBd92cpoEfrw2y+huBEUpNGd1ZGi34H0LgXTfHP1QhwcNgNRvIbmNUEWEuwDb64P9aHIwqq1YQIDAQAB",
+  "minimum_chrome_version": "116",
+  "permissions": ["debugger", "nativeMessaging", "storage", "tabs"],
+  "host_permissions": ["https://www.flova.ai/*"],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Codex 页面截图录屏",
+    "default_popup": "popup.html"
+  }
+}
