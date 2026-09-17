@@ -1,15 +1,16 @@
 # Codex 页面截图录屏
 
-适用于 macOS 的本地 Chrome + Codex 插件。它可以让 Codex 截取 FlovaAI 标签页的可见页面，或录制无声 H.264 MP4。
+适用于 macOS 的本地 Chrome + Codex 插件。它可以让 Codex 截取任意普通 HTTP(S) 网页标签页的可见页面，或录制无声 H.264 MP4。
 
 ## 默认行为
 
-- 默认网站：`https://www.flova.ai/*`
+- 默认网站：全部普通 HTTP(S) 网页（`https://*/*`、`http://*/*`）
 - 默认目录：`~/Pictures/Codex Captures/YYYY-MM-DD/`
 - 截图：PNG，只含网页可见区域
 - 录屏：无声 H.264 MP4，最长 30 分钟
 - 保存路径仅允许位于当前用户目录或 `/Volumes`
 - 不上传、不遥测、不读取 Cookie、历史记录或网络请求
+- 不支持 Chrome 内部页面，例如 `chrome://` 和扩展管理页
 
 ## 安装
 

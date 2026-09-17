@@ -1,12 +1,12 @@
 # Codex Page Capture
 
-让 Codex 直接截取或录制当前 Chrome 中的 FlovaAI 页面。截图保存为 PNG，录屏保存为无声 H.264 MP4；只采集网页可见区域，不包含浏览器工具栏或桌面。
+让 Codex 直接截取或录制当前 Chrome 中的普通 HTTP(S) 网页。截图保存为 PNG，录屏保存为无声 H.264 MP4；只采集网页可见区域，不包含浏览器工具栏或桌面。
 
 > 当前版本仅支持 macOS + Google Chrome，采用 Chrome 开发者模式加载扩展。
 
 ## 能做什么
 
-- 列出当前允许采集的 FlovaAI 标签页
+- 列出当前允许采集的普通网页标签页
 - 截取当前页面可见区域并保存 PNG
 - 开始、停止或定时录制当前页面，输出 H.264 MP4
 - 每次调用指定保存目录，或修改默认保存目录
@@ -53,7 +53,7 @@ codex plugin add codex-page-capture@liyichao-tools
 
 ## 验证
 
-先在 Chrome 前台打开一个 `https://www.flova.ai/` 页面，再运行：
+先在 Chrome 前台打开任意普通 HTTP(S) 页面，再运行：
 
 ```bash
 node plugins/codex-page-capture/scripts/health-check.mjs
@@ -62,19 +62,19 @@ node plugins/codex-page-capture/scripts/health-check.mjs
 在新的 Codex 任务中可以直接说：
 
 ```text
-列出可以采集的 FlovaAI 标签页，然后截取当前页面并把图片给我看。
+列出可以采集的网页标签页，然后截取当前页面并把图片给我看。
 ```
 
 或：
 
 ```text
-录制当前 FlovaAI 页面 5 秒，把 MP4 保存路径发给我。
+录制当前网页 5 秒，把 MP4 保存路径发给我。
 ```
 
 ## 权限与安全
 
-- 默认只允许 `https://www.flova.ai/*`
-- 拒绝 Chrome 内部页、扩展页、隐身页和非白名单网页
+- 默认允许普通 HTTP(S) 网页（`https://*/*`、`http://*/*`）
+- 拒绝 Chrome 内部页、扩展页和隐身页
 - 不读取 Cookie、浏览历史、网络请求或表单数据
 - 保存路径仅允许位于当前用户目录或 `/Volumes`
 - 截图结束后会断开调试器；录屏停止、超时或失败后也会断开并清理临时帧

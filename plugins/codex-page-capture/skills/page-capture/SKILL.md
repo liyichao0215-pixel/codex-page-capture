@@ -1,6 +1,6 @@
 ---
 name: page-capture
-description: Use the local Codex Page Capture Chrome extension to list allowed FlovaAI tabs, save visible-page PNG screenshots, and record silent MP4 videos. Use when the user asks Codex to screenshot or record a page in their existing Chrome session.
+description: Use the local Codex Page Capture Chrome extension to list Chrome webpage tabs, save visible-page PNG screenshots, and record silent MP4 videos. Use when the user asks Codex to screenshot or record a page in their existing Chrome session.
 ---
 
 # Page Capture
@@ -17,7 +17,7 @@ Use the bundled MCP tools for all capture operations.
 
 ## Safety
 
-- Do not broaden the website allowlist unless the user explicitly asks.
+- The default scope is ordinary http(s) webpages; Chrome internal pages are excluded.
 - Do not retry a debugger-conflict error repeatedly; ask the user to close DevTools or finish the other Chrome task.
 - A recording must remain on the target foreground tab. If it auto-stops after the tab is hidden, report that the returned MP4 is partial.
 - The plugin captures only page pixels. It does not authorize clicking, submitting, downloading from, or otherwise changing the page.

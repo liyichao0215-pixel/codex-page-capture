@@ -1,4 +1,6 @@
-export const DEFAULT_ALLOWLIST = ["https://www.flova.ai/*"];
+// Capture ordinary web pages by default. Chrome internal pages remain excluded
+// because only http(s) patterns are accepted below.
+export const DEFAULT_ALLOWLIST = ["https://*/*", "http://*/*"];
 
 export function normalizeAllowlist(value) {
   const items = Array.isArray(value) ? value : [];
@@ -16,9 +18,10 @@ export function matchesPattern(url, pattern) {
     if (!match || parsed.protocol !== `${match[1]}:`) return false;
     const hostPattern = match[2].toLowerCase();
     const host = parsed.hostname.toLowerCase();
-    const hostMatches = hostPattern.startsWith("*.")
-      ? host === hostPattern.slice(2) || host.endsWith(`.${hostPattern.slice(2)}`)
-      : host === hostPattern;
+    const hostMatches = hostPattern === "*"
+      || (hostPattern.startsWith("*.")
+        ? host === hostPattern.slice(2) || host.endsWith(`.${hostPattern.slice(2)}`)
+        : host === hostPattern);
     if (!hostMatches) return false;
     const pathPattern = match[3];
     if (pathPattern === "/*") return true;
